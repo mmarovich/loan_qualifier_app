@@ -1,6 +1,6 @@
 # Project Title
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+An app that takes in client input for loan applications, and cross references it with bank information held in a cvs file.  The client can then get information back about which banks they qualify for a loan, with an option to save the information in a cvs file.
 
 ---
 
@@ -18,7 +18,10 @@ In this section, you should include detailed installation notes containing code 
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+Run the scrip with:
+> Python app.py
+
+Answer the questions when prompted.  You will then be prompted if you would like to save and where to save it (be sure to specify the file name too!)
 
 ---
 
