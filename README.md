@@ -1,4 +1,4 @@
-# Project Title
+# Loan Qualifier App
 
 An app that takes in client input for loan applications, and cross references it with bank information held in a cvs file.  The client can then get information back about which banks they qualify for a loan, with an option to save the information in a cvs file.
 
@@ -10,8 +10,7 @@ Must be run with python in your terminal.
 
 **Dependencies:**
 
-`fire
-questionary`
+*fire* and *questionary*
 
 ---
 
@@ -34,7 +33,7 @@ Answer the questions when prompted.  You will then be prompted if you would like
 
 ## Contributors
 
-This is a project #2 of 2U's FinTech course.
+This is project #2 of 2U's FinTech course.
 
 ---
 
