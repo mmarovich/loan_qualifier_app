@@ -6,7 +6,11 @@ An app that takes in client input for loan applications, and cross references it
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+Must be run with python in your terminal.
+
+Dependencies:
+
+> pip install fire questionary
 
 ---
 
