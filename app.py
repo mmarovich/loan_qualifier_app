@@ -13,6 +13,7 @@ import csv
 from pathlib import Path
 
 from qualifier.utils.fileio import load_csv
+from qualifier.utils.save_csv import save_csv
 
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
@@ -115,25 +116,9 @@ def save_qualifying_loans(qualifying_loans):
     if save:
         save_where = questionary.text("Where would you like to save it?").ask()
         save_csv(save_where, qualifying_loans)
+        print("File saved!")
     else:
         print("Fine, whatever")
-
-
-def save_csv(csvpath, qualifying_data):
-    with open(csvpath, "w") as csvfile:
-        # Create a csvwriter
-        csvwriter = csv.writer(csvfile, delimiter=",")
-
-        header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
-
-        # Write the header to the CSV file
-        csvwriter.writerow(header)
-
-        # Write the values of each dictionary inside of `big_raisers`
-        # as a row in the CSV file.
-        for loan in qualifying_data:
-            print(loan)
-            csvwriter.writerow(loan)
 
 
 def run():

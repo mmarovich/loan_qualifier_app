@@ -8,15 +8,18 @@ An app that takes in client input for loan applications, and cross references it
 
 Must be run with python in your terminal.
 
-Dependencies:
+**Dependencies:**
 
-> pip install fire questionary
+`fire
+questionary`
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+> git clone git@github.com:mmarovich/loan_qualifier_app.git
+> pip install fire questionary
+> python app.py
 
 ---
 
@@ -31,10 +34,10 @@ Answer the questions when prompted.  You will then be prompted if you would like
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+This is a project #2 of 2U's FinTech course.
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+MIT
