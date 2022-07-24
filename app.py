@@ -9,6 +9,7 @@ Example:
 import sys
 import fire
 import questionary
+import csv
 from pathlib import Path
 
 from qualifier.utils.fileio import load_csv
@@ -109,7 +110,30 @@ def save_qualifying_loans(qualifying_loans):
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
+    save = questionary.confirm("Would you like to save the results?").ask()
+
+    if save:
+        save_where = questionary.text("Where would you like to save it?").ask()
+        save_csv(save_where, qualifying_loans)
+    else:
+        print("Fine, whatever")
+
+
+def save_csv(csvpath, qualifying_data):
+    with open(csvpath, "w") as csvfile:
+        # Create a csvwriter
+        csvwriter = csv.writer(csvfile, delimiter=",")
+
+        header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
+
+        # Write the header to the CSV file
+        csvwriter.writerow(header)
+
+        # Write the values of each dictionary inside of `big_raisers`
+        # as a row in the CSV file.
+        for loan in qualifying_data:
+            print(loan)
+            csvwriter.writerow(loan)
 
 
 def run():
